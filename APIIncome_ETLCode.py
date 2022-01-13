@@ -2,6 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Code to load in the API data, clean, merge with the meta data, break into groups by the full
 API = pd.read_csv('Data/API_FP.CPI.TOTL.ZG_DS2_en_csv_v2_3469540.csv', skiprows=4)
 print(API)
 
@@ -82,4 +83,5 @@ APIuppermidincome.to_csv(
     "Data/InflationMerged_UpperMidIncome.csv", index=False)
 APIhighincome.to_csv("Data/InflationMerged_HighIncome.csv", index=False)
 APIaggincome.to_csv("Data/InflationMerged_AggregateIncome.csv", index=False)
+APIall.to_csv("Data/InflationMerged_AllIncome.csv", index=False)
 
